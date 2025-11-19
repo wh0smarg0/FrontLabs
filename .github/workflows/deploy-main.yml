@@ -1,4 +1,4 @@
-name: Deploy site1 from main
+name: Deploy lab2 from main
 
 on:
   push:
