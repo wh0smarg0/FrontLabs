@@ -17,5 +17,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
-          destination_dir: site1
+          destination_dir: lab2
           keep_files: true
