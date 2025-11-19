@@ -1,0 +1,21 @@
+name: Deploy site2 from lab3
+
+on:
+  push:
+    branches:
+      - lab3
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to gh-pages/site2
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          destination_dir: site2
+          keep_files: true
