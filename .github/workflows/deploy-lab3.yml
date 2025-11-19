@@ -1,4 +1,4 @@
-name: Deploy site2 from lab3
+name: Deploy lab3 from lab3
 
 on:
   push:
@@ -17,5 +17,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
-          destination_dir: site2
+          destination_dir: lab3
           keep_files: true
