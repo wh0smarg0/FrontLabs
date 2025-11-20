@@ -3,7 +3,7 @@ name: Deploy lab4 from main
 on:
   push:
     branches:
-      - main
+      - lab4
 
 jobs:
   deploy:
