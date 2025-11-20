@@ -1,4 +1,4 @@
-name: Deploy lab2 from main
+name: Deploy lab4 from main
 
 on:
   push:
@@ -12,10 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy to gh-pages/lab2
+      - name: Deploy to gh-pages/lab4
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
-          destination_dir: lab2
+          destination_dir: lab4
           keep_files: true
