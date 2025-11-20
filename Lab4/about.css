@@ -7,6 +7,7 @@
 }
 
 html, body {
+    /* Налаштування екрана: повна висота, центрування вмісту */
     min-height: 100vh;
     margin: 0;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
@@ -14,7 +15,7 @@ html, body {
     color: var(--text);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* Вміст притиснутий догори */
     padding: 50px 0;
 }
 
@@ -35,36 +36,40 @@ html, body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* 1. БАЗОВІ СТИЛІ h1 (Елемент #1) */
 #element-1 {
-    display: block;
+    display: block; /* Повертаємо блок для вертикального розташування */
     padding: 0 8px;
-    margin: 0 auto 5px;
+    margin: 0 auto 5px;   /* Центрування та невеликий нижній відступ */
     transition: all 0.3s ease;
-    width: fit-content;
+    width: fit-content; /* Ширина по вмісту */
 }
 
+/* 2. БАЗОВІ СТИЛІ p.subtitle (Елемент #2) */
 #element-2 {
     color: var(--muted);
     font-size: 18px;
-    display: block;
+    display: block; /* Повертаємо блок для вертикального розташування */
     padding: 0 8px;
-    margin: 0 auto;
+    margin: 0 auto;       /* Центрування */
     transition: all 0.3s ease;
-    width: fit-content;
+    width: fit-content; /* Ширина по вмісту */
 }
 
+/* КУРСОРИ ДЛЯ ЕЛЕМЕНТІВ ЗАВДАННЯ №1 */
 #element-1, #element-2 {
     cursor: pointer;
 }
 
-/* === СТИЛІ ДЛЯ ЗАВДАННЯ 1: ЗМІНА КОЛЬОРУ РЯДКА === */
+/* === СТИЛІ ДЛЯ ЗАВДАННЯ 1: ЗМІНА КОЛЬОРУ РЯДКА (Фінальне виправлення) === */
 
 /* Стилі для Елемента №1 (h1) */
 #element-1.highlight-id {
     background: #008080 !important;
     color: #fff !important;
-    padding: 4px 10px !important;
+    padding: 4px 10px !important; /* Збільшуємо padding при кліку */
     border-radius: 4px;
+    /* ВИПРАВЛЕННЯ: width: fit-content; гарантує, що при зміні padding елемент не "стрибає" */
     width: fit-content !important;
     margin-bottom: 5px !important;
 }
@@ -73,10 +78,11 @@ html, body {
 #element-2.highlight-query {
     background: #4682b4 !important;
     color: #f0f8ff !important;
-    padding: 4px 10px !important;
+    padding: 4px 10px !important; /* Збільшуємо padding при кліку */
     border-radius: 4px;
+    /* ВИПРАВЛЕННЯ: width: fit-content; гарантує, що при зміні padding елемент не "стрибає" */
     width: fit-content !important;
-    margin: 0 auto !important;
+    margin: 0 auto !important; /* Центрування */
 }
 
 /* =========================================== */
