@@ -63,7 +63,7 @@ html, body {
 #element-1.highlight-id {
     background: #008080 !important;
     color: #fff !important;
-    padding: 4px 10px !important; /* Збільшуємо padding при кліку */
+    padding: 4px 10px !important;
     border-radius: 4px;
     width: fit-content !important;
     margin-bottom: 5px !important;
