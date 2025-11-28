@@ -1,9 +1,9 @@
-name: Deploy lab6 from main
+name: Deploy lab7 from main
 
 on:
   push:
     branches:
-      - lab6
+      - lab7
 
 jobs:
   deploy:
@@ -17,5 +17,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
-          destination_dir: lab6
+          destination_dir: lab7
           keep_files: true
