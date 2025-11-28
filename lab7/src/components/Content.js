@@ -4,10 +4,10 @@ import Image from './Image';
 class Content extends Component {
   render() {
     return (
-      <section className="profiles" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
+      <section className="profiles">
         
         {/* Картка Артема */}
-        <div className="profile-card" style={{ background: 'white', border: '1px solid #ddd', padding: '20px', width: '45%', minWidth: '300px', borderRadius: '10px' }}>
+        <div className="profile-card">
           <h2>Жмура Артем Анатолійович</h2>
           <p>Народився 3 серпня 2006 року в Миколаєві, Україна.</p>
           <p>Закінчив Миколаївський муніципальний колегіум, зараз навчаюсь 3 курс 123 спеціальність в КПІ на ФІОТ</p>
@@ -40,7 +40,7 @@ class Content extends Component {
         </div>
 
         {/* Картка Маргарити */}
-        <div className="profile-card" style={{ background: 'white', border: '1px solid #ddd', padding: '20px', width: '45%', minWidth: '300px', borderRadius: '10px' }}>
+        <div className="profile-card">
           <h2>Сахно Маргарита Юріївна</h2>
           <p>Народилася 11 липня 2006 року в Києві, Україна.</p>
           <p>Закінчила Технічний ліцей НТУУ "КПІ", зараз навчаюсь 3 курс 123 спеціальність в КПІ на ФІОТ</p>
@@ -68,7 +68,7 @@ class Content extends Component {
           <Image 
             src="https://back.uniqa.ua/storage/news/images/medium/vT6Vs2K3qyeaJBNCcRCbR8Z9BfFb8Jx58afS3clV.jpg?v=1722511676" 
             alt="Вулиці Вінниці"
-            link="#" // Можна додати посилання, якщо є
+            link="#" 
           />
         </div>
 
