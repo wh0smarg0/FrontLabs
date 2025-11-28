@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Сахно Маргарита Юріївна | Група: ІО-35 | Лаб. №5 | Варіант 10</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .form-group { margin-bottom: 10px; }
+        label { display: inline-block; width: 220px; }
+        .error { border: 2px solid red; background-color: #ffe6e6; }
+        .success { border: 2px solid green; background-color: #e6ffe6; }
+        table { border-collapse: collapse; margin-top: 20px; }
+        td { width: 40px; height: 40px; text-align: center; border: 1px solid black; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Завдання 1: Валідація форми</h2>
+    <form id="labForm">
+        <div class="form-group">
+            <label>ПІБ (ТТТТТТ Т.Т.):</label>
+            <input type="text" id="pib" placeholder="Петров П.П.">
+        </div>
+        <div class="form-group">
+            <label>Група (ТТ-ЧЧ):</label>
+            <input type="text" id="group" placeholder="ІТ-01">
+        </div>
+        <div class="form-group">
+            <label>Телефон ((ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ):</label>
+            <input type="text" id="phone" placeholder="(099)-123-45-67">
+        </div>
+        <div class="form-group">
+            <label>Адреса (м. ЧЧЧЧЧЧ):</label>
+            <input type="text" id="address" placeholder="м. 123456">
+        </div>
+        <div class="form-group">
+            <label>e-mail (ттт@ттт.com):</label>
+            <input type="text" id="email" placeholder="mail@example.com">
+        </div>
+        <button type="button" onclick="validateForm()">Перевірити</button>
+    </form>
+
+    <hr>
+
+    <h2>Завдання 2: Таблиця 6х6</h2>
+    <p>Номер варіанта: <strong>10</strong></p>
+    <label>Колір для кліку: <input type="color" id="colorPicker" value="#0000ff"></label>
+    <br>
+    <table id="myTable"></table>
+
+    <script src="script.js"></script>
+</body>
+</html>
