@@ -7,12 +7,12 @@ import GoodsCard from './components/GoodsCard';
 function App() {
   // Масив товарів для Галереї
   const goods = [
-    { id: 1, name: 'Ноутбук', price: 25000, image: 'https://cdn-icons-png.flaticon.com/512/2933/2933245.png' },
-    { id: 2, name: 'Телефон', price: 15000, image: 'https://cdn-icons-png.flaticon.com/512/644/644458.png' },
-    { id: 3, name: 'Навушники', price: 2000, image: 'https://cdn-icons-png.flaticon.com/512/5906/5906124.png' },
-    { id: 4, name: 'Годинник', price: 5000, image: 'https://cdn-icons-png.flaticon.com/512/2972/2972497.png' },
-    { id: 5, name: 'Планшет', price: 12000, image: 'https://cdn-icons-png.flaticon.com/512/0/190.png' },
-    { id: 6, name: 'Камера', price: 18000, image: 'https://cdn-icons-png.flaticon.com/512/685/685655.png' },
+    { id: 1, name: 'Ноутбук', price: 25000, image: 'https://cdn-icons-png.flaticon.com/512/54/54718.png' },
+    { id: 2, name: 'Телефон', price: 15000, image: 'https://cdn-icons-png.flaticon.com/512/65/65680.png' },
+    { id: 3, name: 'Навушники', price: 2000, image: 'https://cdn-icons-png.flaticon.com/512/27/27106.png' },
+    { id: 4, name: 'Годинник', price: 5000, image: 'https://cdn-icons-png.flaticon.com/512/3003/3003984.png' },
+    { id: 5, name: 'Планшет', price: 12000, image: 'https://cdn-icons-png.flaticon.com/512/64/64730.png' },
+    { id: 6, name: 'Камера', price: 18000, image: 'https://cdn-icons-png.flaticon.com/512/482/482662.png' },
   ];
 
   return (
