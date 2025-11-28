@@ -28,7 +28,7 @@ function validateForm() {
         },
         { 
             id: 'email', 
-            // тттттт@ттттт.com (стандартна перевірка email)
+            // тттттт@ттттт.com (перевірка email)
             regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
             name: 'e-mail'
         }
