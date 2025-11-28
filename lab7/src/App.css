@@ -6,100 +6,31 @@
     --accent: #22d3ee;
 }
 
-html, body {
-    /* Налаштування екрана: повна висота, центрування вмісту */
-    min-height: 100vh;
+body {
     margin: 0;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
     background: linear-gradient(135deg, #0b1220, #0f172a);
     color: var(--text);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Вміст притиснутий догори */
-    padding: 50px 0;
+    min-height: 100vh;
 }
 
-.about-container {
+/* Контейнер додатку */
+.App {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 20px;
+}
+
+/* Картки профілів (Content.js) */
+.profile-card {
     background: rgba(17, 24, 39, 0.55);
     border: 1px solid rgba(148, 163, 184, 0.15);
     border-radius: 18px;
     backdrop-filter: blur(8px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-.page-header {
-    text-align: center;
-    margin-bottom: 40px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* 1. БАЗОВІ СТИЛІ h1 (Елемент #1) */
-#element-1 {
-    display: block; /* Повертаємо блок для вертикального розташування */
-    padding: 0 8px;
-    margin: 0 auto 5px;   /* Центрування та невеликий нижній відступ */
-    transition: all 0.3s ease;
-    width: fit-content; /* Ширина по вмісту */
-}
-
-/* 2. БАЗОВІ СТИЛІ p.subtitle (Елемент #2) */
-#element-2 {
-    color: var(--muted);
-    font-size: 18px;
-    display: block; /* Повертаємо блок для вертикального розташування */
-    padding: 0 8px;
-    margin: 0 auto;       /* Центрування */
-    transition: all 0.3s ease;
-    width: fit-content; /* Ширина по вмісту */
-}
-
-/* КУРСОРИ ДЛЯ ЕЛЕМЕНТІВ ЗАВДАННЯ №1 */
-#element-1, #element-2 {
-    cursor: pointer;
-}
-
-/* === СТИЛІ ДЛЯ ЗАВДАННЯ 1: ЗМІНА КОЛЬОРУ РЯДКА (Фінальне виправлення) === */
-
-/* Стилі для Елемента №1 (h1) */
-#element-1.highlight-id {
-    background: #008080 !important;
-    color: #fff !important;
-    padding: 4px 10px !important; /* Збільшуємо padding при кліку */
-    border-radius: 4px;
-    /* ВИПРАВЛЕННЯ: width: fit-content; гарантує, що при зміні padding елемент не "стрибає" */
-    width: fit-content !important;
-    margin-bottom: 5px !important;
-}
-
-/* Стилі для Елемента №2 (p.subtitle) */
-#element-2.highlight-query {
-    background: #4682b4 !important;
-    color: #f0f8ff !important;
-    padding: 4px 10px !important; /* Збільшуємо padding при кліку */
-    border-radius: 4px;
-    /* ВИПРАВЛЕННЯ: width: fit-content; гарантує, що при зміні padding елемент не "стрибає" */
-    width: fit-content !important;
-    margin: 0 auto !important; /* Центрування */
-}
-
-/* =========================================== */
-
-.profiles {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.profile-card {
-    background: rgba(2, 6, 23, 0.4);
-    border: 1px solid rgba(148, 163, 184, 0.15);
-    border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    margin-bottom: 20px;
+    color: var(--text);
 }
 
 .profile-card h2 {
@@ -114,29 +45,27 @@ html, body {
 
 .profile-card ul, .profile-card ol {
     margin-left: 20px;
+    color: var(--muted);
 }
 
-.city-photo {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: cover;
-    margin-top: 12px;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-    transition: width 0.3s ease, max-width 0.3s ease;
+.profile-card li {
+    margin-bottom: 5px;
 }
 
-/* Стилі для кнопок (Завдання 2) */
-.button-group {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
+/* Заголовки (Header.js) */
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--accent);
 }
 
-.button-group button {
+.page-header p {
+    color: var(--muted);
+    font-size: 1.2rem;
+}
+
+/* Кнопки (Image.js, GoodsCard.js) */
+button {
     padding: 8px 15px;
     border: 1px solid var(--muted);
     background-color: var(--card);
@@ -144,36 +73,51 @@ html, body {
     cursor: pointer;
     border-radius: 6px;
     transition: background-color 0.2s, color 0.2s;
+    font-family: inherit;
+    font-size: 14px;
 }
 
-.button-group button:hover {
+button:hover {
     background-color: var(--accent);
     color: var(--bg);
     border-color: var(--accent);
 }
 
-.back-link {
-    display: block;
-    width: fit-content;
-    margin: 24px auto 0;
-    text-decoration: none;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    padding: 6px 12px;
-    border-radius: 8px;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.back-link:hover {
-    background: var(--accent);
-    color: #0f172a;
-}
-
-.about-container > footer {
+/* Галерея товарів (GoodsCard.js) */
+.goods-card {
+    background: rgba(17, 24, 39, 0.8);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 12px;
+    padding: 20px;
     text-align: center;
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(148, 163, 184, 0.15);
-    color: var(--muted);
-    font-size: 0.85em;
+    transition: transform 0.2s;
+}
+
+.goods-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.goods-card img {
+    max-width: 80px;
+    margin-bottom: 15px;
+}
+
+.goods-card h3 {
+    color: var(--text);
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.goods-card p {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Лінія розділювача */
+hr {
+    border: 0;
+    height: 1px;
+    background: rgba(148, 163, 184, 0.3);
+    margin: 40px 0;
 }
