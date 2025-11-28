@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; // Сюди можете вставити ваші стилі з about.css
+import './App.css';
 import Header from './components/Header';
 import Content from './components/Content';
 import GoodsCard from './components/GoodsCard';
