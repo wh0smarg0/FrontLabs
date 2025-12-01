@@ -1,4 +1,4 @@
-/* --- RESET & BASIC STYLES --- */
+/* --- ОСНОВНІ НАЛАШТУВАННЯ --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,6 +10,7 @@ body {
     color: #333;
     line-height: 1.6;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 .container {
@@ -89,7 +90,7 @@ ul {
 
 /* --- HERO SECTION --- */
 .hero {
-    height: 90vh; /* Висота першого екрану */
+    height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
     background-size: cover;
     background-position: center;
@@ -131,13 +132,14 @@ ul {
     background-color: #d9531e;
 }
 
-/* --- COMMON SECTION STYLES --- */
+/* --- ЗАГАЛЬНІ СТИЛІ СЕКЦІЙ --- */
 .section-title {
     text-align: center;
     font-size: 32px;
     margin-bottom: 60px;
     position: relative;
     font-weight: 700;
+    color: #333;
 }
 
 .section-title::after {
@@ -149,7 +151,7 @@ ul {
     margin: 15px auto 0;
 }
 
-/* --- CURRENT AUCTIONS --- */
+/* --- CURRENT AUCTIONS (ТОВАРИ) --- */
 .auctions {
     padding: 100px 0;
     background-color: #fff;
@@ -234,36 +236,34 @@ ul {
     border-color: #333;
 }
 
-/* --- HOW IT WORKS (PROCESS) --- */
+/* --- HOW IT WORKS (ВИПРАВЛЕННЯ) --- */
 .process {
     padding: 80px 0;
     background-color: #fff;
 }
 
 .process-grid {
-    display: flex;
+    display: flex; /* Це робить елементи в рядок */
     justify-content: space-between;
     gap: 30px;
     text-align: center;
-    flex-wrap: wrap;
 }
 
 .process-item {
     flex: 1;
-    min-width: 200px;
 }
 
 .icon-circle {
-    width: 90px;
-    height: 90px;
-    background-color: #f16821;
+    width: 80px;
+    height: 80px;
+    background-color: #f16821; /* Помаранчевий фон */
     color: #fff;
-    font-size: 36px;
+    font-size: 30px; /* Розмір іконки всередині */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 25px;
+    margin: 0 auto 20px; /* Центрування */
     transition: 0.3s;
 }
 
@@ -274,7 +274,7 @@ ul {
 
 .process-item h3 {
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .process-item p {
@@ -282,14 +282,14 @@ ul {
     font-size: 14px;
 }
 
-/* --- ABOUT US --- */
+/* --- ABOUT US (ВИПРАВЛЕННЯ) --- */
 .about {
-    padding: 100px 0;
-    background-color: #f8f9fa;
+    padding: 80px 0;
+    background-color: #f9f9f9; /* Світло-сірий фон */
 }
 
 .about-container {
-    display: flex;
+    display: flex; /* Картинка і текст поруч */
     align-items: center;
     gap: 50px;
 }
@@ -325,15 +325,19 @@ ul {
     margin: 0 5px;
 }
 
-/* --- TESTIMONIALS --- */
+/* --- TESTIMONIALS / HAPPY CLIENTS (ВИПРАВЛЕННЯ) --- */
 .testimonials {
-    padding: 100px 0;
-    background-color: #f16821;
+    padding: 80px 0;
+    background-color: #f16821; /* Помаранчевий фон */
     background-image: linear-gradient(135deg, #f16821 0%, #ff9f43 100%);
     color: #fff;
     text-align: center;
 }
 
+/* Змінюємо колір підкреслення заголовка на білий */
+.testimonials .section-title {
+    color: #fff;
+}
 .testimonials .section-title::after {
     background-color: #fff;
 }
@@ -377,43 +381,49 @@ ul {
     font-size: 14px;
 }
 
-/* --- ADAPTIVE (MEDIA QUERIES) --- */
+/* --- АДАПТИВНІСТЬ (MEDIA QUERIES) --- */
+/* Завжди в кінці файлу */
 
-/* Планшети (горизонтальні) та малі ноутбуки */
 @media (max-width: 1024px) {
     .products-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
     .hero h1 {
         font-size: 50px;
     }
 }
 
-/* Планшети (вертикальні) */
 @media (max-width: 768px) {
     .nav, .auth-buttons {
-        display: none; /* Сховати меню */
+        display: none;
     }
     
     .burger-menu {
-        display: flex; /* Показати бургер */
+        display: flex;
     }
 
     .hero h1 {
         font-size: 40px;
     }
 
+    /* Сітка товарів у 2 колонки */
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Процес у стовпчик */
+    .process-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* Про нас у стовпчик */
     .about-container {
         flex-direction: column;
     }
     
     .about-img {
-        order: 2;
+        order: 2; /* Картинка знизу */
     }
     
     .about-content {
@@ -421,20 +431,16 @@ ul {
         text-align: center;
     }
 
-    .section-title {
-        text-align: center !important; /* Примусове центрування для About */
+    .section-title::after {
+        margin: 15px auto 0 !important; /* Центруємо лінію */
     }
     
-    .section-title::after {
-        margin: 15px auto 0 !important;
-    }
-
-    .process-grid {
-        flex-direction: column;
+    .about-list {
+        display: inline-block;
+        text-align: left;
     }
 }
 
-/* Телефони */
 @media (max-width: 480px) {
     .products-grid {
         grid-template-columns: 1fr;
@@ -444,10 +450,6 @@ ul {
         font-size: 30px;
     }
     
-    .hero p {
-        font-size: 16px;
-    }
-
     .btn-primary {
         padding: 12px 30px;
     }
