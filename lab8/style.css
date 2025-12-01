@@ -381,10 +381,11 @@ ul {
     line-height: 1.5;
 }
 
-/* --- TESTIMONIALS --- */
+/* --- TESTIMONIALS (CAROUSEL 2 ITEMS) --- */
 .testimonials {
     padding: 100px 0;
     background-color: #f16821;
+    /* Градієнт + Картинка */
     background-image: 
         linear-gradient(rgba(241, 104, 33, 0.92), rgba(255, 159, 67, 0.92)),
         url('https://cdn.pixabay.com/photo/2015/11/06/11/48/shopping-1026505_1280.jpg');
@@ -405,64 +406,108 @@ ul {
     margin-bottom: 5px;
 }
 
-.section-title.white { color: #fff; }
-.section-title.white::after { background-color: #fff; margin: 15px auto 40px; }
-
-/* Scroll Container */
-.testimonials-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 30px;
-    padding-bottom: 30px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
+.section-title.white {
+    color: #fff;
 }
-.testimonials-scroll::-webkit-scrollbar { display: none; }
 
-/* Testimonial Card */
+.section-title.white::after {
+    background-color: #fff;
+    margin: 15px auto 60px;
+}
+
+/* === КОНТЕЙНЕР СКРОЛУ === */
+.testimonials-scroll {
+    display: flex;          /* Елементи в рядок */
+    overflow-x: auto;       /* Горизонтальна прокрутка */
+    gap: 30px;              /* Відстань між картками */
+    padding-bottom: 30px;   /* Відступ знизу */
+    scroll-snap-type: x mandatory; /* "Примагнічування" при скролі */
+    
+    /* Приховати скролбар */
+    scrollbar-width: none; 
+}
+.testimonials-scroll::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* === КАРТКА === */
 .testimonial-card {
-    min-width: 350px;
-    flex: 0 0 auto;
+    /* МАГІЯ ТУТ: 50% ширини мінус половина відступу (15px) */
+    min-width: calc(50% - 15px);
+    flex: 0 0 calc(50% - 15px);
+    
     text-align: left;
     background: transparent;
-    padding: 0 10px;
-    scroll-snap-align: center;
+    scroll-snap-align: start; /* Картка зупиняється на початку контейнера */
 }
 
 .client-header {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin-bottom: 25px;
 }
 
 .testimonial-card img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     border: 3px solid rgba(255,255,255,0.5);
     object-fit: cover;
 }
 
 .testimonial-card h3 {
-    font-size: 18px;
+    font-size: 20px;
     color: #fff;
     margin-bottom: 2px;
+    font-weight: 600;
 }
 
-.testimonial-card .role {
-    font-size: 12px;
+.role {
+    font-size: 13px;
     text-transform: uppercase;
     opacity: 0.8;
     color: #fff;
     letter-spacing: 1px;
+    display: block;
+    font-weight: 400;
 }
 
 .testimonial-card p {
     font-style: italic;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 17px;
+    line-height: 1.8;
     color: rgba(255,255,255,0.9);
+    margin: 0;
+}
+
+/* === КРАПОЧКИ (Декор) === */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 30px;
+    height: 4px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+/* === АДАПТИВНІСТЬ === */
+@media (max-width: 768px) {
+    /* На телефонах показуємо по ОДНІЙ картці */
+    .testimonial-card {
+        min-width: 85vw;
+        flex: 0 0 85vw;
+    }
 }
 
 /* --- FOOTER --- */
