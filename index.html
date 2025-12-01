@@ -2,57 +2,99 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Сахно Маргарита Юріївна | Група: ІО-35 | Лаб. №2 | Варіант 10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Сахно Маргарита Юріївна | Група: ІО-35 | Лаб. №8 | Варіант 10</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<table class="original-complex-table">
-    <tr>
-        <td class="cell r1-c1"></td>
-        <td class="cell r1-c2"></td>
-        <td rowspan="2" class="cell text-content r1-c3-r2">Сахно</td>
-        <td class="cell text-content r1-c4">Маргарита</td>
-        <td rowspan="2" class="cell text-content r1-c5-r2">Юріївна</td>
-    </tr>
 
-    <tr>
-        <td colspan="2" class="cell text-content r2-c1-c2-merged">ІО-35</td>
-        <td class="cell text-content r2-c4">ЛР2 Варіант 10</td>
-    </tr>
-
-    <tr>
-        <td colspan="2" class="cell white-cell r3-part1"></td>
-        <td colspan="3" class="cell white-cell r3-part2"></td>
-    </tr>
-</table>
-
-<div class="gears-container">
-    <div class="gear-wrapper">
-        <h2>position</h2>
-        <div class="gear gear-position">
-            <div class="center"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">Auction</div>
+            <nav class="nav">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Buy</a>
+                <a href="#" class="nav-link">Sell</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#">Sign In / Register</a>
+            </div>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="gear-wrapper">
-        <h2>transform</h2>
-        <div class="gear gear-transform"><div class="center"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
-            <div class="tooth"></div>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>The Best Place to <br> Buy and Sell</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, nihil.</p>
+            <a href="#" class="btn-primary">Register</a>
         </div>
-    </div>
-</div>
+    </section>
+
+    <section class="auctions">
+        <div class="container">
+            <h2 class="section-title">Current Auctions</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="price-tag">$95</div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2589/2589903.png" alt="Shoes">
+                    <h3>Pinky Shoes</h3>
+                    <div class="product-footer">
+                        <span>Shoes</span>
+                        <span>4 bids</span>
+                    </div>
+                    <button class="btn-bid">Submit a Bid</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="price-tag">$30</div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/88/88746.png" alt="Glasses">
+                    <h3>Eye Glass Protector</h3>
+                    <div class="product-footer">
+                        <span>Eye Glasses</span>
+                        <span>10 bids</span>
+                    </div>
+                    <button class="btn-bid">Submit a Bid</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="price-tag">$199</div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/9373/9373507.png" alt="Jacket">
+                    <h3>Black Leather Jacket</h3>
+                    <div class="product-footer">
+                        <span>Clothing</span>
+                        <span>24 bids</span>
+                    </div>
+                    <button class="btn-bid">Submit a Bid</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="price-tag">$1,999</div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/428/428001.png" alt="Laptop">
+                    <h3>MacBook 15-Inch</h3>
+                    <div class="product-footer">
+                        <span>Electronics</span>
+                        <span>224 bids</span>
+                    </div>
+                    <button class="btn-bid">Submit a Bid</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Auction Site. Lab Work #8.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
