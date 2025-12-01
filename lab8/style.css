@@ -432,13 +432,12 @@ ul {
 
 /* === КАРТКА === */
 .testimonial-card {
-    /* МАГІЯ ТУТ: 50% ширини мінус половина відступу (15px) */
     min-width: calc(50% - 15px);
     flex: 0 0 calc(50% - 15px);
     
     text-align: left;
     background: transparent;
-    scroll-snap-align: start; /* Картка зупиняється на початку контейнера */
+    scroll-snap-align: start;
 }
 
 .client-header {
