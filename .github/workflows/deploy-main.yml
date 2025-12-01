@@ -1,9 +1,9 @@
-name: Deploy lab2 from main
+name: Deploy lab8 from main
 
 on:
   push:
     branches:
-      - main
+      - lab8
 
 jobs:
   deploy:
@@ -12,10 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy to gh-pages/lab2
+      - name: Deploy to gh-pages/lab8
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
-          destination_dir: lab2
+          destination_dir: lab8
           keep_files: true
